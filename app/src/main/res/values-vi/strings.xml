@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">Supper Shipper</string>
+
+    //Login Activity
+    <string name="hint_email">Tên đăng nhập</string>
+    <string name="hint_pass">Mật khẩu</string>
+    <string name="hinh_first_name">Họ</string>
+    <string name="text_login">Đăng nhập</string>
+    <string name="text_forgot_password">Quên mật khẩu? </string>
+    <string name="text_recover"><u>Recover it</u></string>
+    <string name="text_register">Đăng kí mới</string>
+    <string name="text_not_input_username_pass">Vui lòng nhập đủ tên và mật khẩu!</string>
+
+    //SignUp Activity
+    <string name="text_create_accout">Tạo mới tài khoản</string>
+    <string name="text_not_account">Bạn chưa có tài khoản? </string>
+    <string name="text_a_member">Bạn đã là thành viên? </string>
+    <string name="text_sign_up"><u>Đăng kí</u></string>
+    <string name="text_sign_in"><u>Đăng nhập</u></string>
+    <string name="hint_lastname">Tên</string>
+    <string name="hint_confirm_pass">Xác nhận mật khẩu</string>
+    <string name="hint_firstname">Họ</string>
+    <string name="hint_groupname">Tên nhóm</string>
+    <string name="hint_search">Tìm kiếm</string>
+    <string name="text_please_inpur_all_info">Vui lòng nhập đầy đủ thông tin!</string>
+    <string name="text_success_register">Đăng kí thành công!</string>
+    <string name="text_error_register">Đăng kí lỗi. Vui lòng kiểm tra lại!</string>
+    <string name="text_fail_register">Đăng kí thất bại. Vui lòng kiểm tra lại!</string>
+
+    //ChatTalks Activity
+    <string name="textview_text_chat_name">Bạn bè</string>
+    <string name="edittext_input_message">Nhập nội dung tin nhắn</string>
+    <string name="popupcopy">Sao chép</string>
+    <string name="popupshare">Chia sẻ</string>
+    <string name="popupdelete">Xóa</string>
+
+    //MainActivity
+    <string name="title_friend_fragment">Bạn bè</string>
+    <string name="title_news_fragment">Bảng tin</string>
+    <string name="title_chat_fragment">Tin nhắn</string>
+    <string name="title_more_fragment">Thêm</string>
+
+    //SharingMessage Activity
+    <string name="title_sharing_message">Chuyển tiếp</string>
+    <string name="button_sharing_message">Chia sẻ</string>
+    <string name="text_message_send">Nội dung</string>
+    <string name="hind_text_view_title">Gửi dưới dạng tin nhắn cho</string>
+
+    //NetWork Activity
+    <string name="capture">Không có kết nối internet</string>
+    <string name="description">Thiết bị của bạn chưa có kết nối internet. Hãy thiết lập kết nối!</string>
+    <string name="button_try_again"><u>Thử lại!</u></string>
+
+    //Comment Activity
+    <string name="hint_edt_comment"><u>Nhập bình luận của bạn</u></string>
+    <string name="title_comment_activity">Bình luận</string>
+    <string name="text_like">thích và</string>
+    <string name="text_comment">bình luận.</string>
+
+    //Fragment
+    <string name="title_tab_friend">Bạn bè</string>
+    <string name="title_tab_chat">Nhắn tin</string>
+    <string name="title_tab_more">Thêm</string>
+    <string name="title_tab_news">Tin tức</string>
+    <string name="title_tab_add_news">Tạo tin mới</string>
+    <string name="title_me">Tôi</string>
+    <string name="title_friend">Bạn bè</string>
+    <string name="str_logout">Đăng xuất</string>
+    <string name="str_update_profile">Cập nhật thông tin</string>
+    <string name="str_language">Ngôn ngữ</string>
+    <string name="str_about">Thông tin</string>
+    <string name="str_not_have_room">You not have room chat</string>
+    <string name="empty" translatable="false" />
+    <string name="no_message">Chưa có tin nhắn nào</string>
+
+    //AddNews Fragment
+    <string name="edt_description">Nói điều gì về hình ảnh này...</string>
+    <string name="str_profile">Thông tin cá nhân</string>
+    <string name="title_activity_news_fragment">NewsFragment</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_share">Chia sẻ</string>
+
+    //Dialog
+    <string name="dialog_cancel">Trở về</string>
+    <string name="dialog_save">Lưu</string>
+    <string name="dialog_edit_profile">Sửa thông tin cá nhân</string>
+    <string name="dialog_chat">Nhắn tin</string>
+    <string name="dialog_call_audio">Gọi thoại</string>
+    <string name="dialog_call_video">Gọi video</string>
+
+    //Menu ChatTalkActivity
+    <string name="menu_member">Thành viên</string>
+    <string name="menu_setting">Cài đặt</string>
+    <string name="menu_help">Trợ giúp</string>
+
+    //AddGroupActivity
+    <string name="title_new_group">Thêm nhóm trò chuyện</string>
+    <string name="btn_create_group">Tạo nhóm</string>
+
+    //Choose Language Activity
+    <string name="lang_en">Tiếng Anh</string>
+    <string name="lang_vi">Tiếng Việt</string>
+
+    //Call Activity
+    <string name="text_incoming_call_audio">Cuộc gọi thoại từ </string>
+    <string name="text_incoming_call_video">Cuộc gọi video từ </string>
+    <string name="text_call_audio_to">Đang gọi tới </string>
+    <string name="text_call_video_to">Đang gọi video tới </string>
+    <string name="text_call_end">Kết thúc cuộc gọi!</string>
+
+    //Permission
+    <string name="text_accept_permission">Bạn cần cấp quyền để tiếp tục sử dụng!</string>
+
+    //About Activity
+    <string name="about_version">Phiên bản hiện tại: 1.0.0</string>
+    <string name="about_product">Một sản phẩm của nhóm thực tập sinh BAP, 2018</string>
+    <string name="about_contact">Liên hệ: greenchatting@gmail.com</string>
+
+    //Update profile activity
+    <string name="str_btn_update">Cập nhật</string>
+
+    //Confirm Dialog
+    <string name="title_delete_message">Xóa tin nhắn?</string>
+    <string name="description_delete_message">Bạn không thể hoàn tác sau khi xóa bản sao của những tin nhắn này</string>
+    <string name="confirm_yes">Có</string>
+    <string name="confirm_no">Không</string>
+    <string name="result_delete">Đã Xóa!</string>
+    <string name="copy_message">Đã sao chép văn bản!</string>
+    <string name="app_name_edit">Supper Shipper</string>
+
+</resources>

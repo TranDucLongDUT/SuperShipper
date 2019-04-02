@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.bap.traning.simplechat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".BaseApp_"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_02"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme">
+        <activity android:name=".ui.SplashActivity_">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity_" />
+        <activity android:name=".ui.LoginActivity_" />
+        <activity android:name=".ui.SignUpActivity_" />
+        <activity android:name=".ui.ChatTalksActivity_" />
+        <activity android:name=".ui.FullScreenImageActivity_" />
+        <activity android:name=".ui.AddGroupChatActivity_" />
+        <activity android:name=".ui.SearchGroupChatActivity_" />
+        <activity android:name=".ui.SharingMessageActivity_" />
+        <activity android:name=".ui.CallActivity_" />
+        <activity android:name=".ui.NetworkActivity_" />
+
+        <service
+            android:name=".service.ChatService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.CommentActivity_" />
+        <activity android:name=".ui.CallBusyActivity_" />
+        <activity android:name=".ui.AddNewsActivity_" />
+        <activity android:name=".ui.ChooseLanguageActivity_" />
+        <activity android:name=".ui.AboutActivity_" />
+        <activity android:name=".ui.UpdateProfileActivity_"></activity>
+    </application>
+
+</manifest>
