@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import io.realm.Realm;
+import jp.bap.traning.simplechat.presenter.news.NewsPresenter;
 import jp.bap.traning.simplechat.service.ApiClient;
 import jp.bap.traning.simplechat.service.ChatService;
 import jp.bap.traning.simplechat.service.ImgurClient;
@@ -31,7 +32,7 @@ import jp.bap.traning.simplechat.utils.SharedPrefs;
 @Fullscreen
 @EActivity(R.layout.activity_splash)
 public class SplashActivity extends BaseActivity {
-    private static final String TAG = SplashActivity.class.getClass().getSimpleName();
+    private static final String TAG = SplashActivity.class.getSimpleName();
     private static boolean isNotWifi = false;
 
     @Override
@@ -81,6 +82,7 @@ public class SplashActivity extends BaseActivity {
         new GetRoomsPresenter(new GetRoomsView() {
             @Override
             public void onSuccess(RoomResponse result) {
+                new NewsPresenter().requestAllNews();
                 int mMineId =
                         SharedPrefs.getInstance().getData(SharedPrefs.KEY_SAVE_ID, Integer.class);
                 if (ChatService.getChat() == null) {

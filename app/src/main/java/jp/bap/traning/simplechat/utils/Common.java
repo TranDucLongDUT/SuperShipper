@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.realm.RealmList;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +34,7 @@ import static jp.bap.traning.simplechat.utils.SharedPrefs.KEY_SAVE_ID;
 
 
 public class Common {
-    public static final String URL_SERVER = "http://172.16.0.55:3000/";
+    public static final String URL_SERVER = "http://172.16.1.151:3000/";
     public static final String ACTION_SOCKET_EVENT = "action.socket.event";
     public static final int REQUEST_LOGIN = 100;
     public static final int REQUEST_LOGOUT = 101;
@@ -41,7 +42,7 @@ public class Common {
     public static final int STATUS_SUCCESS = 200;
     public static final int TYPE_GROUP_TWO_PEOPLE = 0;
     public static final int TYPE_GROUP_MORE_PEOPLE = 1;
-    private static final String TAG = "Common";
+    private static final String TAG = Common.class.getSimpleName();
     public static final String typeText = "text";
     public static final String typeImage = "image";
     public static final String typeLink = "link";
@@ -51,6 +52,12 @@ public class Common {
     public static final String KEY_CHOOSE_LANGUAGE = "CHOOSE_LANGUAGE";
     public static final int REQUEST_CHOOSE_LANGUAGE_ACTIVITY = 102;
     public static ArrayList<User> usersOnline = new ArrayList<>();
+    public static final int PAGE_NEWS = 0;
+    public static final int PAGE_FRIENDS = 1;
+    public static final int PAGE_CHAT = 2;
+    public static final int PAGE_MORE = 3;
+    public static final int ROOM_TYPE_PRIVATE = 0;
+    public static final int ROOM_TYPE_GROUP = 1;
     //    public static final int mMineId =
 //            SharedPrefs.getInstance().getData(SharedPrefs.KEY_SAVE_ID, Integer.class);
     public static final int DEFAULT_VALUE_IF_NOT_EXITS_GROUP = 0;
@@ -61,8 +68,10 @@ public class Common {
 
     public static Room getFullRoomFromRoomId(int roomId) {
         Room room = new RoomDAO().getRoomFromRoomId(roomId);
+        Log.d(TAG,""+room);
         if (room != null) {
-            if (room.getType() == 0) {
+            if ( room.getAvatar() != null ) {
+            } else if (room.getType() == ROOM_TYPE_PRIVATE) {
                 for (User user : room.getUsers()) {
                     if (user.getId() != SharedPrefs.getInstance()
                             .getData(SharedPrefs.KEY_SAVE_ID, Integer.class)) {

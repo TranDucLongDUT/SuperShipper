@@ -49,6 +49,7 @@ import jp.bap.traning.simplechat.widget.CustomToolbar;
 
 @EActivity(R.layout.activity_chat_talks)
 public class ChatTalksActivity extends BaseActivity {
+    private static final String TAG = ChatTalksActivity.class.getSimpleName();
     private MessagePresenter messagePresenter;
     private ChatTalksPresenter chatTalksPresenter;
     ArrayList<Message> listMessage;

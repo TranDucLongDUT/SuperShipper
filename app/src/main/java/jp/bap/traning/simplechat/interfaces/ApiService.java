@@ -5,6 +5,7 @@ import java.util.List;
 import jp.bap.traning.simplechat.response.AddRoomResponse;
 import jp.bap.traning.simplechat.response.BaseResponse;
 import jp.bap.traning.simplechat.response.GetRoomResponse;
+import jp.bap.traning.simplechat.response.NewsResponse;
 import jp.bap.traning.simplechat.response.RoomResponse;
 import jp.bap.traning.simplechat.response.SignUpResponse;
 import jp.bap.traning.simplechat.response.UserResponse;
@@ -35,6 +36,12 @@ public interface ApiService {
     //get list room
     @GET("/rooms")
     Call<RoomResponse> getListRoom();
+
+    //get list news
+    @GET("/news")
+    Call<NewsResponse> getListNews();
+
+
 
     // add room
     @FormUrlEncoded

@@ -34,7 +34,7 @@ import jp.bap.traning.simplechat.widget.CustomToolbar;
 public class AddNewsActivity extends BaseActivity {
 
     private static String linkImage = "";
-
+    private static final String TAG = AddNewsActivity.class.getSimpleName();
     @ViewById
     CircleImageView mAvatarAddNews;
     @ViewById

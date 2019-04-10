@@ -1,13 +1,17 @@
 package jp.bap.traning.simplechat.widget;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.support.v7.widget.SearchView;
 import android.view.View;
+import android.view.Window;
 import android.widget.RelativeLayout;
 
 import jp.bap.traning.simplechat.ui.AddNewsActivity_;
@@ -129,8 +133,23 @@ public class CustomToolbar extends RelativeLayout {
             }
 
             case R.id.mImgButtonSetting: {
-                AddNewsActivity_.intent(getContext()).start();
-                ((Activity)context).overridePendingTransition(R.anim.anim_slides_in_right,R.anim.anim_slides_out_left);
+                //
+                Dialog mDialogConfirm = new Dialog(getContext());
+                mDialogConfirm.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                mDialogConfirm.setContentView(R.layout.dialog_confirm_add_news);
+                AppCompatButton btnOrder = mDialogConfirm.findViewById(R.id.mBtnOrder);
+                AppCompatButton btnPostNew = mDialogConfirm.findViewById(R.id.mBtnPostNews);
+                btnOrder.setOnClickListener(e -> {
+                    mDialogConfirm.dismiss();
+                });
+                btnPostNew.setOnClickListener(e -> {
+                    AddNewsActivity_.intent(getContext()).start();
+                    ((Activity)context).overridePendingTransition(R.anim.anim_slides_in_right,R.anim.anim_slides_out_left);
+                    mDialogConfirm.dismiss();
+                });
+
+                mDialogConfirm.show();
+                //
                 break;
             }
 

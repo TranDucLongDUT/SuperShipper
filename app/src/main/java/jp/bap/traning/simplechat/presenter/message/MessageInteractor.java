@@ -1,5 +1,7 @@
 package jp.bap.traning.simplechat.presenter.message;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 import jp.bap.traning.simplechat.database.MessageDAO;

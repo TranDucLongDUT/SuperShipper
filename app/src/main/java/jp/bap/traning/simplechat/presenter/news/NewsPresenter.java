@@ -1,5 +1,9 @@
 package jp.bap.traning.simplechat.presenter.news;
 
+import android.util.Log;
+
+import java.util.ArrayList;
+
 import jp.bap.traning.simplechat.model.News;
 
 public class NewsPresenter {
@@ -25,5 +29,19 @@ public class NewsPresenter {
 
     public News getOneNewsFromID(long newsId) {
         return mNewsInteractor.getOneNewsFromID(newsId);
+    }
+
+    public void requestAllNews() {
+        mNewsInteractor.requestAllNews(new NewsView() {
+            @Override
+            public void getAllNews(ArrayList<News> news) {
+                Log.d("NewsPresenter","getAllNews from API Success"+news);
+            }
+
+            @Override
+            public void errorGetAllNews() {
+                Log.d("","errorGetAllNews from API Success");
+            }
+        });
     }
 }

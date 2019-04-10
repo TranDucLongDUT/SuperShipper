@@ -22,7 +22,7 @@ public class News extends RealmObject implements Parcelable {
     private User user;
     private String description;
     private String imageView;
-    private int isLike;
+    private int isLike;                     // count like
     private RealmList<User> usersLike;
     private int countComment;
 

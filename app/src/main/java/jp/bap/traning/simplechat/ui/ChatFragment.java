@@ -33,7 +33,8 @@ import static jp.bap.traning.simplechat.model.User.userComparator;
  */
 @EFragment(R.layout.fragment_chat)
 public class ChatFragment extends BaseFragment {
-    private static final String TAG = "ChatFragment";
+
+    private static final String TAG = ChatFragment.class.getSimpleName();
     @ViewById
     RecyclerView mRecyclerRoom;
     private ArrayList<Room> mListRoom;

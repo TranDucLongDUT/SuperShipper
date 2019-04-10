@@ -1,6 +1,7 @@
 package jp.bap.traning.simplechat.presenter.message;
 
 import android.content.ClipboardManager;
+import android.util.Log;
 
 import jp.bap.traning.simplechat.model.Message;
 

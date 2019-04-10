@@ -1,5 +1,6 @@
 package jp.bap.traning.simplechat.ui;
 
+import android.util.Log;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 

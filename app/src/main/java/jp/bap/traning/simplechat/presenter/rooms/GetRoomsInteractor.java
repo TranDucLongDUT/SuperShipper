@@ -1,5 +1,7 @@
 package jp.bap.traning.simplechat.presenter.rooms;
 
+import android.util.Log;
+
 import java.util.List;
 
 import jp.bap.traning.simplechat.database.RoomDAO;
@@ -15,6 +17,7 @@ import retrofit2.Response;
  */
 
 public class GetRoomsInteractor {
+
     public void request(GetRoomsView callback) {
         Call<RoomResponse> mCallUser = ApiClient.getService().getListRoom();
         mCallUser.enqueue(new Callback<RoomResponse>() {

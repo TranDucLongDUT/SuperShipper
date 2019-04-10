@@ -30,6 +30,7 @@ import jp.bap.traning.simplechat.utils.SharedPrefs;
  */
 
 public class FriendExpandLvAdapter extends BaseExpandableListAdapter {
+    private final String TAG = FriendExpandLvAdapter.class.getSimpleName();
     private Context mContext;
     private ArrayList<String> mHeaderGroup;
     private HashMap<String, ArrayList<User>> mDataChild;

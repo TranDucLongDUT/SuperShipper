@@ -121,7 +121,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     @Override
     public void onPageSelected(int position) {
         switch (position) {
-            case 0: {
+            case Common.PAGE_NEWS: {
                 mToolbar.setVisibility(View.VISIBLE);
                 mToolbar.getTvTitle().setVisibility(View.VISIBLE);
                 mToolbar.getSettingButton().setVisibility(View.VISIBLE);
@@ -134,7 +134,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
                 break;
             }
 
-            case 1: {
+            case Common.PAGE_FRIENDS: {
                 mToolbar.setVisibility(View.VISIBLE);
                 mToolbar.getTvTitle().setVisibility(View.VISIBLE);
                 mToolbar.getSettingButton().setVisibility(View.GONE);
@@ -146,7 +146,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
                 break;
             }
 
-            case 2: {
+            case Common.PAGE_CHAT: {
                 mToolbar.setVisibility(View.VISIBLE);
                 mToolbar.getTvTitle().setVisibility(View.VISIBLE);
                 mToolbar.getSettingButton().setVisibility(View.GONE);
@@ -160,7 +160,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
                 break;
             }
 
-            case 3: {
+            case Common.PAGE_MORE: {
                 mToolbar.getTvTitle().setVisibility(View.GONE);
                 mToolbar.setVisibility(View.GONE);
                 mToolbar.getSettingButton().setVisibility(View.GONE);

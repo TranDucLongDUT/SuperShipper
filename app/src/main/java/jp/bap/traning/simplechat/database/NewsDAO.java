@@ -18,7 +18,7 @@ public class NewsDAO {
         mRealm.close();
     }
 
-    public ArrayList<News> getAllMessage() {
+    public ArrayList<News> getAllNews() {
         ArrayList<News> newsList = new ArrayList<>();
         Realm mRealm = Realm.getDefaultInstance();
         RealmResults<News> results = mRealm.where(News.class).findAll();
