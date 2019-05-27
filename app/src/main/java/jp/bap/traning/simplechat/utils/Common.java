@@ -34,7 +34,7 @@ import static jp.bap.traning.simplechat.utils.SharedPrefs.KEY_SAVE_ID;
 
 
 public class Common {
-    public static final String URL_SERVER = "http://192.168.1.7:3000";
+    public static final String URL_SERVER = "http://172.16.1.134:3000";
     public static final String ACTION_SOCKET_EVENT = "action.socket.event";
     public static final int REQUEST_LOGIN = 100;
     public static final int REQUEST_LOGOUT = 101;

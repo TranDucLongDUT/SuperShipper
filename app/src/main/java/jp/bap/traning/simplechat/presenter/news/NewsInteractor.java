@@ -53,7 +53,13 @@ public class NewsInteractor {
             @Override
             public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {
 //                List<News> news = response.body().getData();
-                Log.d("onResponseGetNews","");
+                if (response.isSuccessful() && response.body().getData() != null) {
+                    Log.d("onResponseGetNews","");
+                    List<News> news = response.body().getData();
+                    for (News n : news) {
+                        mNewsDAO.insertOrUpdateNews(n);
+                    }
+                }
             }
 
             @Override
