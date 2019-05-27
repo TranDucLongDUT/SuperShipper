@@ -12,7 +12,6 @@
         android:layout_height="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_3sdp"
         android:src="@drawable/ic_avatar_default"
-        app:layout_constraintBottom_toBottomOf="@id/mLnChat"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView

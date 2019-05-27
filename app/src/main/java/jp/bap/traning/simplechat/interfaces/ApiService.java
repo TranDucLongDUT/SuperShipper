@@ -38,7 +38,7 @@ public interface ApiService {
     Call<RoomResponse> getListRoom();
 
     //get list news
-    @GET("/news")
+    @GET("news")
     Call<NewsResponse> getListNews();
 
 

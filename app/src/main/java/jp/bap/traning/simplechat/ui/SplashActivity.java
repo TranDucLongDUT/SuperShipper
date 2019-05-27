@@ -82,7 +82,7 @@ public class SplashActivity extends BaseActivity {
         new GetRoomsPresenter(new GetRoomsView() {
             @Override
             public void onSuccess(RoomResponse result) {
-//                new NewsPresenter().requestAllNews();
+
                 int mMineId =
                         SharedPrefs.getInstance().getData(SharedPrefs.KEY_SAVE_ID, Integer.class);
                 if (ChatService.getChat() == null) {
@@ -107,6 +107,7 @@ public class SplashActivity extends BaseActivity {
 
             }
         }).request();
+        new NewsPresenter().requestAllNews();
     }
 
     @Override

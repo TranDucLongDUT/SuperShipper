@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/_3sdp"
-    android:layout_marginTop="@dimen/_5sdp">
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_3sdp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/mAvatar"
@@ -12,26 +12,23 @@
         android:layout_height="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_3sdp"
         android:src="@drawable/ic_avatar_default"
-        app:layout_constraintBottom_toBottomOf="@id/mLnChat"
+        app:layout_constraintBottom_toBottomOf="@id/txtMessage"
+        app:layout_constraintLeft_toRightOf="@id/txtMessage"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/mLnChat"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtMessage"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_message_mine"
-        android:orientation="horizontal"
-        app:layout_constraintRight_toLeftOf="@+id/mAvatar"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/txtMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Hellooooooooooooo"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14ssp" />
-    </LinearLayout>
+        android:ellipsize="end"
+        android:maxWidth="@dimen/_270sdp"
+        android:text="Hellooooo0999999999999999999999999999"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toStartOf="@+id/mAvatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
