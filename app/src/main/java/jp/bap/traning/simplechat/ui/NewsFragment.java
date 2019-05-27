@@ -20,6 +20,7 @@ import jp.bap.traning.simplechat.utils.Common;
 
 @EFragment(R.layout.fragment_news)
 public class NewsFragment extends BaseFragment {
+    private final String TAG = NewsFragment.class.getSimpleName();
     private NewsPresenter mNewsPresenter;
     private ArrayList<News> newsArrayList;
     private NewsAdapter newsAdapter;
@@ -44,6 +45,7 @@ public class NewsFragment extends BaseFragment {
         mNewsPresenter = new NewsPresenter(new NewsView() {
             @Override
             public void getAllNews(ArrayList<News> news) {
+                Log.d(TAG,"getAllNews"+news);
                 newsArrayList.clear();
                 for (int i = 0; i < news.size(); i++) {
                     newsArrayList.add(0, news.get(i));
@@ -54,7 +56,7 @@ public class NewsFragment extends BaseFragment {
 
             @Override
             public void errorGetAllNews() {
-                Log.d("NewsFragment", "Error Get All News");
+                Log.d(TAG, "Error Get All News");
             }
         });
         //Get All News

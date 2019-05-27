@@ -42,7 +42,6 @@ public interface ApiService {
     Call<NewsResponse> getListNews();
 
 
-
     // add room
     @FormUrlEncoded
     @POST("/room")

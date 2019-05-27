@@ -113,8 +113,8 @@
 
     //About Activity
     <string name="about_version">Phiên bản hiện tại: 1.0.0</string>
-    <string name="about_product">Một sản phẩm của nhóm thực tập sinh BAP, 2018</string>
-    <string name="about_contact">Liên hệ: greenchatting@gmail.com</string>
+    <string name="about_product">Ứng dụng Super Shipper, 2019</string>
+    <string name="about_contact">Liên hệ: supershipper@gmail.com</string>
 
     //Update profile activity
     <string name="str_btn_update">Cập nhật</string>

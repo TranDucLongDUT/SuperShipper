@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.Comparator;
+import java.util.Date;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -20,8 +21,10 @@ public class User extends RealmObject implements Parcelable {
     private String firstName;
     private String lastName;
     private String avatar;
+    private Date createdAt;
 
     public User() {
+        this.createdAt = new Date();
     }
 
     protected User(Parcel in) {
@@ -29,6 +32,7 @@ public class User extends RealmObject implements Parcelable {
         firstName = in.readString();
         lastName = in.readString();
         avatar = in.readString();
+        this.createdAt = new Date();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {

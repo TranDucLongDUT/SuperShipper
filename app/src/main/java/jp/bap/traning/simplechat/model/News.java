@@ -2,10 +2,14 @@ package jp.bap.traning.simplechat.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.Date;
+
+import javax.annotation.Nullable;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
@@ -25,6 +29,7 @@ public class News extends RealmObject implements Parcelable {
     private int isLike;                     // count like
     private RealmList<User> usersLike;
     private int countComment;
+    private Date createdAt;
 
     public News() {
     }
@@ -37,6 +42,7 @@ public class News extends RealmObject implements Parcelable {
         isLike = 0;
         usersLike = new RealmList<>();
         countComment=0;
+        this.createdAt = new Date();
     }
 
 
@@ -77,6 +83,7 @@ public class News extends RealmObject implements Parcelable {
     }
 
     public RealmList<User> getUsersLike() {
+        Log.d("12345aaa", ""+ usersLike);
         return usersLike;
     }
 

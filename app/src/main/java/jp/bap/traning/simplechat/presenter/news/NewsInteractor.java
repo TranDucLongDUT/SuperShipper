@@ -47,17 +47,18 @@ public class NewsInteractor {
     }
 
     public void requestAllNews(NewsView mNewsView) {
+        Log.d("requestAllNews","");
         Call<NewsResponse> newsResponseCall = ApiClient.getService().getListNews();
         newsResponseCall.enqueue(new Callback<NewsResponse>() {
             @Override
             public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {
 //                List<News> news = response.body().getData();
-                Log.d("onResponseGetNews",""+response.body());
-
+                Log.d("onResponseGetNews","");
             }
 
             @Override
             public void onFailure(Call<NewsResponse> call, Throwable t) {
+                Log.d("onFailure","");
                 mNewsView.errorGetAllNews();
             }
         });

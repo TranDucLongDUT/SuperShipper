@@ -114,8 +114,8 @@
 
     //About Activity
     <string name="about_version">Current version: 1.0.0</string>
-    <string name="about_product">Product of BAP\'s interns, 2018</string>
-    <string name="about_contact">Contact us: greenchatting@gmail.com</string>
+    <string name="about_product">Product Super Shipper, 2019</string>
+    <string name="about_contact">Contact us: supershipper@gmail.com</string>
 
     //Update profile activity
     <string name="str_btn_update">Update</string>

@@ -34,7 +34,7 @@ public class GetRoomsInteractor {
 
             @Override
             public void onFailure(Call<RoomResponse> call, Throwable t) {
-                callback.onError("", 400);
+                callback.onError("onFailure request room", 400);
             }
         });
     }

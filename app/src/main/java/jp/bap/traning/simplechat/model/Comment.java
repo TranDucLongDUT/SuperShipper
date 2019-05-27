@@ -3,6 +3,8 @@ package jp.bap.traning.simplechat.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import lombok.Data;
@@ -17,15 +19,17 @@ public class Comment extends RealmObject implements Parcelable {
     private User user;
     private String comment;
     private long idNews;
+    private Date createdAt;
 
     public Comment() {
     }
 
     public Comment(long id,User mUser, String mComment) {
-        idNews = id;
         idComment = System.currentTimeMillis();
+        idNews = id;
         user = mUser;
         comment = mComment;
+        this.createdAt = new Date();
     }
 
 

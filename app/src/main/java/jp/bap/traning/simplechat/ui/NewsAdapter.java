@@ -6,6 +6,7 @@ import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,10 +24,11 @@ import jp.bap.traning.simplechat.model.User;
 import jp.bap.traning.simplechat.service.ChatService;
 import jp.bap.traning.simplechat.utils.Common;
 
+
 public class NewsAdapter extends RecyclerView.Adapter {
     private ArrayList<News> newsArrayList;
     private Context mContext;
-
+    private static final String TAG = NewsAdapter.class.getSimpleName();
     public NewsAdapter(Context mContext, ArrayList<News> newsArrayList) {
         this.newsArrayList = newsArrayList;
         this.mContext = mContext;
