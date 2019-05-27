@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import io.realm.Realm;
+import jp.bap.traning.simplechat.presenter.comment.CommentPresenter;
 import jp.bap.traning.simplechat.presenter.news.NewsPresenter;
 import jp.bap.traning.simplechat.service.ApiClient;
 import jp.bap.traning.simplechat.service.ChatService;
@@ -108,6 +109,7 @@ public class SplashActivity extends BaseActivity {
             }
         }).request();
         new NewsPresenter().requestAllNews();
+        new CommentPresenter().requestAllComment();
     }
 
     @Override

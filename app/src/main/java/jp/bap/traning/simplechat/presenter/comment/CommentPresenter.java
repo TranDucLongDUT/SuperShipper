@@ -15,6 +15,10 @@ public class CommentPresenter {
         commentInteractor = new CommentInteractor();
     }
 
+    public void requestAllComment() {
+        commentInteractor.requestAllComment();
+    }
+
     public void insertOrUpdate(Comment comment){
         commentInteractor.insertOrUpdate(comment);
     }

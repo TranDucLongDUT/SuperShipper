@@ -83,7 +83,6 @@ public class News extends RealmObject implements Parcelable {
     }
 
     public RealmList<User> getUsersLike() {
-        Log.d("12345aaa", ""+ usersLike);
         return usersLike;
     }
 
