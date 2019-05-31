@@ -182,6 +182,7 @@ public class CallActivity extends BaseActivity {
         }
     }
 
+
     private void initVideos() {
         rootEglBase = EglBase.create();
         if (!isAudioCall) {
@@ -226,6 +227,11 @@ public class CallActivity extends BaseActivity {
         //Create MediaConstraints - Will be useful for specifying video and audio constraints.
         audioConstraints = new MediaConstraints();
         videoConstraints = new MediaConstraints();
+
+        audioConstraints.mandatory.add(new MediaConstraints.KeyValuePair("googEchoCancellation", "false"));
+        audioConstraints.mandatory.add(new MediaConstraints.KeyValuePair("googAutoGainControl", "false"));
+        audioConstraints.mandatory.add(new MediaConstraints.KeyValuePair("googNoiseSuppression", "false"));
+        audioConstraints.mandatory.add(new MediaConstraints.KeyValuePair("googHighpassFilter", "false"));
 
         //Create a VideoSource instance
         if (videoCapturerAndroid != null) {
@@ -644,6 +650,12 @@ public class CallActivity extends BaseActivity {
             mediaStreamLocal.removeTrack(localAudioTrack);
             mediaStreamLocal.dispose();
         }
+        if (localVideoTrack != null) {
+            localVideoTrack.dispose();
+        }
+        if (localAudioTrack != null) {
+            localAudioTrack.dispose();
+        }
         if (audioConstraints != null) {
             audioConstraints = null;
         }
@@ -665,8 +677,13 @@ public class CallActivity extends BaseActivity {
             mRemoteVideoView.release();
         }
         if (localPeer != null) {
+            Log.d(TAG,"Luan cho");
             localPeer.close();
+            localPeer = null;
         }
+//        if (peerConnectionFactory != null) {
+//            peerConnectionFactory.dispose();
+//        }
         MainActivity.checkCall = false;
         finish();
     }

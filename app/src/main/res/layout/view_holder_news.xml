@@ -47,8 +47,7 @@
         <android.support.v7.widget.AppCompatImageButton
             android:id="@+id/btnLike"
             android:layout_width="0dp"
-            android:padding="@dimen/_5sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:src="@drawable/like" />
@@ -68,7 +67,7 @@
             android:layout_weight="1"
             android:padding="@dimen/_10sdp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_share" />
+            android:src="@drawable/share" />
     </LinearLayout>
 
     <LinearLayout

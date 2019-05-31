@@ -7,7 +7,6 @@ import org.webrtc.SessionDescription;
 
 public class CustomSdpObserver implements SdpObserver {
 
-
     private String tag;
 
     public CustomSdpObserver(String logTag) {

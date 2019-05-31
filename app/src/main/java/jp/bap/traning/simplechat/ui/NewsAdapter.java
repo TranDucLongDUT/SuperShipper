@@ -133,7 +133,7 @@ public class NewsAdapter extends RecyclerView.Adapter {
 
             imageButtonComment.setOnClickListener(view -> {
                 CommentActivity_.intent(mContext).mNews(newsArrayList.get(getAdapterPosition())).start();
-                ((Activity) mContext).overridePendingTransition(R.anim.anim_slides_down, R.anim.anim_slides_up);
+//                ((Activity) mContext).overridePendingTransition(R.anim.anim_slides_down, R.anim.anim_slides_up);
             });
 
         }
